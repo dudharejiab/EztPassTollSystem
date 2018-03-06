@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>CSCI6810</display-name>
+	<display-name>Welcome to Tomcat</display-name>
+	<description>
+     EZ Pass System
+  </description>
+	<servlet>
+		<servlet-name>SignUpServlet</servlet-name>
+		<servlet-class>com.controller.SignUpServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SignUpServlet</servlet-name>
+		<url-pattern>/OnlineSignUpServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.controller.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/LoginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>PayTollManuallyControl</servlet-name>
+		<servlet-class>com.controller.PayTollManuallyControl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PayTollManuallyControl</servlet-name>
+		<url-pattern>/PayToll</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>TransactionController</servlet-name>
+		<servlet-class>com.controller.TransactionController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TransactionController</servlet-name>
+		<url-pattern>/TransactionController</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>VehicleController</servlet-name>
+		<servlet-class>com.controller.VehicleController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VehicleController</servlet-name>
+		<url-pattern>/VehicleController</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ProfileController</servlet-name>
+		<servlet-class>com.controller.ProfileController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProfileController</servlet-name>
+		<url-pattern>/ProfileController</url-pattern>
+	</servlet-mapping>
+	<filter>
+		<filter-name>sitemesh</filter-name>
+		<filter-class>com.opensymphony.sitemesh.webapp.SiteMeshFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>sitemesh</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping>
+	<welcome-file-list>
+		<welcome-file>Login.jsp</welcome-file>
+	</welcome-file-list>
+
+</web-app>

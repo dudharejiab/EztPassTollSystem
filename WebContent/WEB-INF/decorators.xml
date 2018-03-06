@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators>
+	<excludes>
+        <pattern>/Login.jsp</pattern>
+        <pattern>/home.jsp</pattern>
+    </excludes>
+<!-- 	 <decorator name="admin"  page="/WEB-INF/decorators/admin_base_layout.jsp"> -->
+<!--         <pattern>/admin/home.htm</pattern> -->
+<!--     </decorator> -->
+<!--     <decorator name="billing"  page="/WEB-INF/decorators/billing_base_layout.jsp"> -->
+<!--         <pattern>/billing**</pattern> -->
+<!--     </decorator> -->
+    <decorator name="simple"  page="/home.jsp">
+        <pattern>*</pattern>
+    </decorator>
+</decorators>
